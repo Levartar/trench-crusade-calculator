@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trench Crusade Dice Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Trench Crusade Dice Calculator</h1>
+
+    <div class="inputs">
+        <!-- Hit Chance Selection -->
+        <label for="hitChance">Hit Chance:</label>
+        <select id="hitChance">
+            <option value=-3>5d6, pick 2 lowest</option>
+            <option value=-2>4d6, pick 2 lowest</option>
+            <option value=-1>3d6, pick 2 lowest</option>
+            <option value=0>2d6</option>
+            <option value=1>3d6, pick 2 highest</option>
+            <option value=2>4d6, pick 2 highest</option>
+            <option value=3>5d6, pick 2 highest</option>
+        </select>
+
+        <!-- Hit Modifiers -->
+        <fieldset>
+            <legend>Hit Modifiers:</legend>
+            <label><input type="checkbox" id="cover"> Cover (-1 Dice)</label><br>
+            <label><input type="checkbox" id="longRange"> Long Range (-1 Dice)</label><br>
+            <label><input type="checkbox" id="elevatedPosition"> Elevated Position (+1 Dice)</label><br>
+        </fieldset>
+        
+        <!-- Wound Chance Selection -->
+        <label for="woundChance">Wound Chance:</label>
+        <select id="woundChance">
+            <option value=-3>5d6, pick 2 lowest</option>
+            <option value=-2>4d6, pick 2 lowest</option>
+            <option value=-1>3d6, pick 2 lowest</option>
+            <option value=0>2d6</option>
+            <option value=1>3d6, pick 2 highest</option>
+            <option value=2>4d6, pick 2 highest</option>
+            <option value=3>5d6, pick 2 highest</option>
+        </select>
+
+        <!-- Wound Modifiers -->
+        <fieldset>
+            <legend>Wound Modifiers:</legend>
+            <label><input type="checkbox" id="targetDown"> Target is Down (+1 Dice)</label><br>
+            <label><input type="checkbox" id="fear"> Enemy causes Fear in Melee (-1 Dice)</label><br>
+        </fieldset>
+
+        <!-- Armor Input -->
+        <label for="armor">Armor:</label>
+        <input type="number" id="armor" value="0">
+
+        <!-- Calculate Button -->
+        <button id="calculateButton">Calculate</button>
+    </div>
+
+    <!-- Output Div -->
+    <div id="result"></div>
+
+    <div id="chart"></div>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
