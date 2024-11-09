@@ -8,8 +8,23 @@ body {
     margin-bottom: 20px;
 }
 
-#chart {
-    margin: 0 auto;
+#results, #charts {
+    width: 100%;
+
+    display: flex;
+    gap: 16px;
+}
+
+#results > div, #charts > div {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+    flex-grow: 1;
+
+    /*margin: 0 auto;
     width: 80%;
-    max-width: 400px;
+    max-width: 400px;*/
 }

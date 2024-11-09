@@ -13,13 +13,15 @@
         <!-- Hit Chance Selection -->
         <label for="hitChance">Hit Chance:</label>
         <select id="hitChance">
-            <option value=-3>5d6, pick 2 lowest</option>
-            <option value=-2>4d6, pick 2 lowest</option>
-            <option value=-1>3d6, pick 2 lowest</option>
-            <option value=0>2d6</option>
-            <option value=1>3d6, pick 2 highest</option>
-            <option value=2>4d6, pick 2 highest</option>
-            <option value=3>5d6, pick 2 highest</option>
+            <option value=-4>-4 dice</option>
+            <option value=-3>-3 dice</option>
+            <option value=-2>-2 dice</option>
+            <option value=-1>-1 dice</option>
+            <option value=0>0</option>
+            <option value=1>+1 dice</option>
+            <option value=2>+2 dice</option>
+            <option value=3>+3 dice</option>
+            <option value=4>+4 dice</option>
         </select>
 
         <!-- Hit Modifiers -->
@@ -33,13 +35,15 @@
         <!-- Wound Chance Selection -->
         <label for="woundChance">Wound Chance:</label>
         <select id="woundChance">
-            <option value=-3>5d6, pick 2 lowest</option>
-            <option value=-2>4d6, pick 2 lowest</option>
-            <option value=-1>3d6, pick 2 lowest</option>
-            <option value=0>2d6</option>
-            <option value=1>3d6, pick 2 highest</option>
-            <option value=2>4d6, pick 2 highest</option>
-            <option value=3>5d6, pick 2 highest</option>
+            <option value=-4>-4 dice</option>
+            <option value=-3>-3 dice</option>
+            <option value=-2>-2 dice</option>
+            <option value=-1>-1 dice</option>
+            <option value=0>0</option>
+            <option value=1>+1 dice</option>
+            <option value=2>+2 dice</option>
+            <option value=3>+3 dice</option>
+            <option value=4>+4 dice</option>
         </select>
 
         <!-- Wound Modifiers -->
@@ -55,12 +59,32 @@
 
         <!-- Calculate Button -->
         <button id="calculateButton">Calculate</button>
+        <button id="toggleBloodMarkers">Toggle Blood Marker Calculations</button>
     </div>
 
     <!-- Output Div -->
-    <div id="result"></div>
+     <div id="outputs">
+        <div id="results">
+            <div id="resultMinusBloodBoth"></div>
+            <div id="resultMinusBloodHit"></div>
+            <div id="resultMinusBloodWound"></div>
+            <div id="resultneutral"></div>
+            <div id="resultPlusBloodHit"></div>
+            <div id="resultPlusBloodWound"></div>
+            <div id="resultPlusBloodBoth"></div>
+         </div>
+    
+        <div id="charts">
+            <div id="chartMinusBloodBoth"></div>
+            <div id="chartMinusBloodHit"></div>
+            <div id="chartMinusBloodWound"></div>
+            <div id="chartneutral"></div>
+            <div id="chartPlusBloodHit"></div>
+            <div id="chartPlusBloodWound"></div>
+            <div id="chartPlusBloodBoth"></div>
+        </div>
+     </div>
 
-    <div id="chart"></div>
     <script type="module" src="script.js"></script>
 </body>
 </html>

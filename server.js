@@ -7,7 +7,6 @@ const PORT = 3000;
 
 // Serve static files from the current directory
 app.use(express.static(path.join(__dirname)));
-app.use('/modules', express.static(path.join(__dirname, 'node_modules')));
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
