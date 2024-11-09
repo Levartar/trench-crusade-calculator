@@ -1,7 +1,20 @@
 body {
-    font-family: Arial, sans-serif;
+    background-color: color-mix(in srgb, Canvas, CanvasText 2.5%);
+    color: color-mix(in srgb, CanvasText, Canvas 15%);
+    color-scheme: light dark;
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 20px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+h1 {
+    color: #f9f9f9;
+    text-shadow: 0 0 3px #c7c1b5, 0 0 5px #e4cc89;
 }
 
 .inputs {
@@ -18,13 +31,23 @@ body {
 #results > div, #charts > div {
     width: 200px;
     padding: 10px;
-    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    border: 1px solid CanvasText;
     text-align: center;
     flex-grow: 1;
 
     /*margin: 0 auto;
     width: 80%;
     max-width: 400px;*/
+}
+
+.image {
+	background-image: url(https://cdna.artstation.com/p/assets/images/images/066/701/580/4k/chander-lieve-antioch-final-comp.jpg?1693560903);
+	height: 80px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+text.label{
+    color: red;
 }

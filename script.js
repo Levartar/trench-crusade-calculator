@@ -190,7 +190,7 @@ svg.selectAll(".label")
     .text((d) => `${(d.value).toFixed(1)}%`) // Display percentage label
     .attr("text-anchor", "middle")
     .style("font-size", "10px")
-    .style("fill", "#333");
+    .style("fill", "#FFFFFF");
 }
 
 // Main function to initiate all simulations
