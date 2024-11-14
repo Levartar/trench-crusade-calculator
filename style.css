@@ -1,38 +1,145 @@
+:root {
+    --backgroundGrey: #38383b;
+    --color-primary: #9d1414;
+    --text-normal: rgb(255, 255, 255);
+    --text-glow: 0 0 3px #c7c1b5, 0 0 5px #e4cc89;
+    --borderStyle: 4px solid white;
+    --borderRoundness: 5px;
+    --gapsVertical: 16px;
+    --spaceInsideBlock: 16px;
+    --spaceAfterBlock: 40px;
+}
+
+/* general element styling */
 body {
-    background-color: color-mix(in srgb, Canvas, CanvasText 2.5%);
+    /*background-color: color-mix(in srgb, Canvas, CanvasText 2.5%);
     color: color-mix(in srgb, CanvasText, Canvas 15%);
-    color-scheme: light dark;
+    color-scheme: light dark;*/
+    background-color: var(--backgroundGrey);
+    color: var(--text-normal);
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     margin: 20px;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-align: center;
 }
 
-h1 {
+.image {
+    background-image: url(https://cdna.artstation.com/p/assets/images/images/066/701/580/4k/chander-lieve-antioch-final-comp.jpg?1693560903);
+    height: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
     color: #f9f9f9;
-    text-shadow: 0 0 3px #c7c1b5, 0 0 5px #e4cc89;
+    text-shadow: var(--text-glow);
+    vertical-align: center;
+}
+
+fieldset {
+    border: var(--borderStyle);
+    border-radius: var(--borderRoundness);
+}
+
+text.label {
+    color: red;
+}
+
+input {
+    accent-color: #9d1414;
+}
+
+
+input[type="number"] {
+    max-width: 66px;
+    height: 20px;
+    border: none;
+    padding: 1px 2px;
+}
+
+select {
+    height: 22px;
+    width: 70px;
+    border: none;
 }
 
 .inputs {
     margin-bottom: 20px;
-}
-
-#results, #charts {
-    width: 100%;
-
     display: flex;
-    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: var(--gapsVertical);
 }
 
-#results > div, #charts > div {
-    width: 200px;
+.inputItem {
+    max-width: 260px;
+}
+
+.inputItem>fieldset {
+    margin-top: 5px;
+}
+
+.calculate {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gapsVertical);
+}
+
+body>div {
+    margin-bottom: var(--spaceAfterBlock);
+}
+
+button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1em;
+    padding: 5px 27px;
+    border: var(--borderStyle);
+    border-radius: var(--borderRoundness);
+}
+
+.buttonPrimary {
+    background-color: #9d1414;
+    color: white;
+}
+.buttonPrimary:hover {
+    background-color: #6a0d0d;
+}
+.buttonPrimary:active {
+    background-color: #4a0909;
+}
+
+.buttonSecondary {
+    background-color: #a8a6a1;
+}
+.buttonSecondary:hover {
+    background-color: #807e7c;
+}
+.buttonSecondary:active {
+    background-color: #52504e;
+}
+
+#results,
+#charts {
+    width: 100%;
+    display: flex;
+    gap: var(--gapsVertical);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#results>div,
+#charts>div {
+    max-width: 200px;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid CanvasText;
+    border: var(--borderStyle);
+    border-radius: var(--borderRoundness);
     text-align: center;
     flex-grow: 1;
 
@@ -41,13 +148,77 @@ h1 {
     max-width: 400px;*/
 }
 
-.image {
-	background-image: url(https://cdna.artstation.com/p/assets/images/images/066/701/580/4k/chander-lieve-antioch-final-comp.jpg?1693560903);
-	height: 80px;
+.share-card {
+    text-align: center;
+    border-radius: 8px;
     padding: 20px;
-    margin-bottom: 10px;
+    width: 250px;
 }
 
-text.label{
-    color: red;
+.share-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.share-icons a {
+    text-decoration: none;
+    color: var(--text-normal);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px;
+    border:  var(--borderStyle);
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.share-icons a:hover {
+    background-color: var(--text-normal);
+    color: #333333;
+}
+
+.share-icons i {
+    font-size: 1.3em;
+    margin-right: 8px;
+}
+
+.share-icons span {
+    font-size: 1em;
+}
+
+.explanation {
+    position: absolute;
+    top: 110px;
+    left: 30px; 
+    display: inline-block; 
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 40vw;
+    background-color: var(--backgroundGrey);
+    border: var(--borderStyle);
+    border-radius: var(--borderRoundness);
+    color: var(--text-normal);
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 5px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+/*#results>[id*="Blood"]{
+    display: none;
+}
+
+/* mobile
+@media only screen and (max-width: 511px) {
+    
 }

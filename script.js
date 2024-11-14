@@ -9,13 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function toggleBloodMarkerCalculations() {
-    const bloodMarkerResults = document.querySelectorAll("#results > div[id*='Blood']");
-    const bloodMarkerCharts = document.querySelectorAll("#charts > div[id*='Blood']");
+    const bloodMarkerResults = document.querySelectorAll("#results > [id*='Blood']");
 
     bloodMarkerResults.forEach(div => {
-        div.style.display = div.style.display === "none" ? "block" : "none";
-    });
-    bloodMarkerCharts.forEach(div => {
         div.style.display = div.style.display === "none" ? "block" : "none";
     });
 }
