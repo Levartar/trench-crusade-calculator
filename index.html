@@ -16,7 +16,11 @@
 
     <div class="explanation tooltip">
         <i class="fa-regular fa-lightbulb"></i>
-        <span class="tooltiptext">The Calculator throws 10000 Dice each time Calculate is pressed and counts the number of respective successes. Outputs can vary because of this</span>
+        <span class="tooltiptext">The Calculator throws 10000 Dice each time Calculate is 
+            pressed and counts the number of respective successes. 
+            Outputs can vary because of this <br>
+            Blood Marker calculations show different outcomes if you would use a Blood, Blessing or Infection Marker.
+        </span>
     </div>
 
     <div class="inputs">
@@ -75,7 +79,16 @@
             <!-- Armor Input -->
             <label for="armor">Armor:</label>
             <input type="number" id="armor" value="0">
+
+            <!-- Armor Modifiers -->
+            <fieldset>
+                <legend>Armor Modifiers:</legend>
+                <label>-Armor subtracts from the injury Roll</label><br>
+                <label>+Armor adds to the injury Roll</label><br>
+            </fieldset>
         </div>
+
+
     </div>
 
     <div class="calculate">

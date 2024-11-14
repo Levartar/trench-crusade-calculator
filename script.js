@@ -64,7 +64,6 @@ function calculateOutcomes(baseHitChance, baseWoundChance, armor) {
 
         displayResults(key, results);
         createChart(key, results);
-        console.log("create chart",key)
     });
 }
 
@@ -108,7 +107,6 @@ function simulateOutcomes(hitChance, woundChance, armor) {
 // Function to display results for each scenario
 function displayResults(scenario, results) {
     const resultDiv = document.getElementById(`result${scenario}`);
-    console.log("try to display", scenario);
     resultDiv.innerHTML = `
         <h3>${scenario}</h6>
         <p>Hit Rate: ${results.hitRate.toFixed(2)}%</p>
@@ -127,7 +125,6 @@ function createChart(scenario, results) {
         { label: "Downs", value: results.downRate },
         { label: "Outs", value: results.outRate },
     ];
-    console.log(data)
     //remove old charts
     d3.select(`#chart${scenario}`).selectAll("*").remove();
 
